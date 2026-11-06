@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Officaial Application Form">
+    <title>Mentorship Program Application Form</title>
+</head>
+<body>
+    <header>
+        <h1>Tech Prophet Mentorship Application</h1>
+        <p>Please complete all required fields below to apply for our upcoming web development mentorship cohort.</p>
+    </header>
+    <main>
+        <form action="/submit-application" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p>
+                    <label for="full-name">Full Name</label><br>
+                    <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="70" autocomplete="name">
+                </p>
+                <p>
+                    <label for="email-address">Email Address:</label><br>
+                    <input type="email" id="email-address" name="email" required autocomplete="email">
+                </p>
+                <p>
+                    <label for="phone-number">Phone Number:</label><br>
+                    <input type="tel" id="phone-number" name="phone" required pattern="[0-1\+\-\s\(\)]{7,20}" autocomplete="tel">
+                </p>
+                <p>
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="date" id="dob" name="date_of_birth" required min="1940-01-01" max="2020-12-31"> 
+                </p>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" id="gender-female" name="gender" value="female" required>
+                    <label for="gender-female">Female</label><br>
+
+                    <input type="radio" id="gender-male" name="gender" value="male">
+                    <label for="gender-male">Male</label><br>
+
+                    <input type="radio" id="gender-nonbinary" name="gender" value="non_binary">
+                    <label for="gender-nonbinary">Non-Binary</label><br>
+
+                    <input type="radio" id="gender-pnts" name="gender" value="prefer-not-to-say">
+                    <label for="gender-pnts">Prefer not to say</label>
+                </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>Development Background &amp; Goals</legend>
+
+                <p>
+                    <label for="experience-level">Current Experience Level</label><br>
+                    <select id="experience-level" name="experience-level" required>
+                        <option value="" disabled selected>-- Select your current level -- </option>
+                        <option value="beginner">Complete Beginner (No coding experience)</option>
+                        <option value="novice">Novice Learner (Basic HTML/CSS Knowledge)</option>
+                        <option value="intermediate">Intermediate (Building small projects)</option>
+                        <option value="advanced">Advanced (Looking for professional mentorship</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Areas of Interest (Select all that apply)</legend>
+
+                    <input type="checkbox" id="interest-html" name="interests" value="semantic_html">
+                    <label for="interest-html">Semantic HTML &amp; Web Architecture</label><br>
+
+                    <input type="checkbox" id="interest-css" name="interests" value="css_layouts">
+                    <label for="interest-css">CSS Layouts (Flexbox &amp; Grid)</label><br>
+
+                    <input type="checkbox" id="interest-js" name="interests" value="Javascript">
+                    <label for="interest-js">Vanilla Javascript &amp; DOM Manipulation</label><br>
+
+                    <input type="checkbox" id="interest-ally" name="interests" value="Accessibility">
+                    <label for="interest-ally">Web Accessibility &amp; ARIA</label><br>
+
+                    <input type="checkbox" id="interest-tools" name="interests" value="devtools_terminal">
+                    <label for="interest-tools">Chrome DevTools &amp; Terminal Workflows</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferred Learning Track</legend>
+
+                    <input type="radio" id="track frontend" name="learning_track" value="frontend" required>
+                    <label for="track-frontend">Frontend Architecture Track</label><br>
+
+                    <input type="radio" id="track-fullstack" name="learning_track" value="fullstack">
+                    <label for="track-fullstack">Full-Stack Web Development Track</label>
+
+
+                </fieldset>
+
+                <p>
+                    <label for="github-url">GitHub Profile URL:</label><br>
+                    <input type="url" id="github-url" name="github_url" required placeholder="https:github.com/username">
+
+                </p>
+                <p>
+                    <label for="intent-statement">Why do you want to join this mentorship program</label><br>
+                    <textarea id="intent-statement" name="intent_statement" rows="5" cols="50" required minlength="50" maxlength="1000" placeholder="Explain your motivation, career goals and what you hope to achieve (minimum 50 characters)..."></textarea>
+
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Availability &amp; Commitment</legend>
+
+                <p>
+                    <label for="weekly-hours">Weekly Time Commitment (in hours):</label><br>
+                    <input type="number" id="weekly-hours" name="weekly_hours" required min="5" max="60" step="1" value="15">
+
+
+                </p>
+                <p>
+                    <input type="checkbox" id="rules-agreement" name="rules_agreement" value="agreed" required>
+                    <label for="rules-agreement">I agree to follow all mentorship code of conduct rules, submit weekly assignments on time, and practice honest learning standards.</label>
+
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Submit Mentorship Application</button>
+                <button type="reset">Reset Form</button>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 Tech Prophet Mentorship. All rights reserved.</p>
+        
+    </footer>
+</body>
+</html>
